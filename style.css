@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f7f4;
@@ -11,6 +15,7 @@ body {
 }
 
 header {
+  background-color: #68745a;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -31,11 +36,11 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 nav a:hover {
-  color: #68745a;
+  color: #f0c987;
 }
 
 .header-cta {
@@ -45,18 +50,19 @@ nav a:hover {
   color: white;
   padding: 12px 20px;
   border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
 .header-cta:hover {
-  background-color: #68745a;
+  background-color: #30372b;
 }
 
 .hero {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 48px;
-  padding: 64px 6%;
+  gap: 32px;
+  padding: 32px 6%;
 }
 
 .hero-content {
@@ -109,7 +115,7 @@ nav a:hover {
 }
 
 #properties {
-  padding: 64px 6%;
+  padding: 23px 6%;
 }
 
 #properties > p {
@@ -176,7 +182,7 @@ nav a:hover {
 }
 
 #about {
-  padding: 80px 6%;
+  padding: 40px 6%;
   margin-top: 40px;
   background-color: #eeeee8;
 }
@@ -212,7 +218,7 @@ nav a:hover {
 }
 
 #contact {
-  padding: 80px 6%;
+  padding: 40px 6%;
   text-align: center;
   background-color: #68745a;
 }
@@ -247,7 +253,7 @@ nav a:hover {
 }
 
 footer {
-  padding: 24px 6%;
+  padding: 12px 6%;
   text-align: center;
   background-color: #222222;
   color: #ffffff;
@@ -259,12 +265,17 @@ footer {
   }
   .hero {
     flex-direction: row;
+    gap: 48px;
+    padding: 64px 6%;
   }
   .hero-content h1 {
-    font-size: 48px;
+    font-size: 40px;
   }
   .hero-image img {
-    height: 480px;
+    height: 420px;
+  }
+  #properties {
+    padding: 64px 6%;
   }
   .properties-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -273,5 +284,23 @@ footer {
   #contact h2,
   #about h2 {
     font-size: 36px;
+  }
+  #about {
+    padding: 80px 6%;
+  }
+  #contact {
+    padding: 80px 6%;
+  }
+  footer {
+    padding: 24px 6%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content h1 {
+    font-size: 48px;
+  }
+  .hero-image img {
+    height: 480px;
   }
 }
