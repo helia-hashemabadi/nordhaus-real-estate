@@ -15,7 +15,6 @@ body {
 }
 
 header {
-  background-color: #68745a;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -36,11 +35,11 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 nav a:hover {
-  color: #f0c987;
+  color: #68745a;
 }
 
 .header-cta {
@@ -54,7 +53,7 @@ nav a:hover {
 }
 
 .header-cta:hover {
-  background-color: #30372b;
+  background-color: #68745a;
 }
 
 .hero {
@@ -149,7 +148,7 @@ nav a:hover {
 
 .property-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px #00000014;
+  box-shadow: 0 16px 40px #00000018;
 }
 
 .property-card img {
@@ -159,17 +158,35 @@ nav a:hover {
   object-fit: cover;
 }
 
+.property-status {
+  display: inline-block;
+  background-color: #e8eee5;
+  color: #46523b;
+  border-radius: 20px;
+  padding: 6px 12px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
 .property-card h3 {
   margin-top: 16px;
   font-size: 20px;
+  transition: color 0.3s ease;
 }
 
-.property-card p {
+.property-card:hover h3 {
+  color: #68745a;
+}
+
+.property-location {
+  font-size: 14px;
   margin-top: 8px;
-  color: #777777;
+  color: #888888;
+  letter-spacing: 0.3px;
 }
 
 .property-price {
+  color: #46523b;
   font-size: 18px;
   font-weight: bold;
   margin-top: 12px;
@@ -179,6 +196,22 @@ nav a:hover {
   margin-top: 12px;
   font-size: 14px;
   color: #777777;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.property-details span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.property-details svg {
+  width: 16px;
+  height: 16px;
+  stroke: #46523b;
+  stroke-width: 1.7;
 }
 
 #about {
